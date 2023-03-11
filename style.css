@@ -4,30 +4,30 @@
     margin: 0;
 }
 :root{
-    --bg-balck:#181a1b;
-    --black:#282b2d;
-    --green:#114945;
+    --bg-black:#0B192E;
+    --bg-:#282b2d;
+    --lite-gray:rgb(204,214,246);
+    --gray:rgb(136,146,175);
+    /* --green:#64ffda; */
     --orang:#bb6c00;
-    --font-green:#1c8787;
+    --font-green:rgb(73,184,165);
 }
 body{
-    background-color: var(--black);
+    background-color: var(--bg-black);
 }
 .header{
-    --header_size:5rem;
-    background-color: var(--black);
+    background-color: var(--bg-black);
     color:var(--font-green);
     width: 100%;
-    height: var(--header_size);
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1;
     position: sticky;
     top: 0;
 }
 .header img{
-    border: 1px solid;
+    /* border: 1px solid; */
     margin-left: 4rem;
 } 
 .header ul{
@@ -44,27 +44,50 @@ body{
 .main{
     /* width: auto;
     margin: .75rem 3rem 2rem 3rem; */
+    z-index: 1;
     margin-top: var(--header_size);
     display: flex;
-    justify-content: space-around;
+    margin: 0 22vh 0 16vh;
+    line-height: 4rem;
+    flex-direction: column;
+    /* justify-content: space-around; */
 }
 .main__content{
-    width: 80%;
+    /* border: 1px solid red; */
+    padding: 10rem 0 10rem 0;
+}
+.main__content h4{
+    color: var(--font-green);
+}
+.main__content h1{
+    color: var(--lite-gray);
+    font-size: xxx-large;
+}
+.main__content p{
+    font-size: x-large;
+    color: var(--gray);
+    margin-top: .5rem;
 }
 .main__left,
 .main__right{
     
-    height: 100vh;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
     z-index: -1;
     width: 10%;
     height:100vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: fixed;
-}
-.main__left{
-    right: 0%;
+    bottom: 0%;
+    color: var(--lite-gray);
+    /* border: 1px solid red; */
+    /* background-color: #114945; */
 }
 .main__right{
+    right: 0%;
+}
+.main__left{
     left: 0%;
 }
 /* .main__right span{
@@ -73,4 +96,106 @@ body{
 } */
 .main__right h2 {
     transform: rotate(-90deg);
+    margin: 7rem;
+    font-weight: 400;
+}
+.main__ability{
+    margin-top: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2rem;
+}
+.main__ability-pic{
+    width: 50%;
+    border: 1px solid red;
+    height: 100%;
+}
+.ability-about{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-bottom: 2rem;
+    color: var(--lite-gray);
+}
+.line{
+
+    width: 70%;
+    height: .5px;
+    margin: 0 4rem 0 2rem;
+    border-bottom: 1px solid var(--gray);
+}
+.main__ability-content p{
+    font-size: 23px;
+    padding:0 1.5rem;
+    color: var(--gray);
+    margin-top: 1rem;
+}
+.ability-list{
+    display: flex;
+    align-items:center;
+    justify-content: left;
+    padding: 0 0 0 1rem;
+}
+.ability-list ul {
+    color: var(--gray
+    );
+    margin: 1rem 0 0 4rem;
+    list-style-type: none;
+}
+.ability-list ul li{
+    padding: 3px;
+    font-size: 17px;
+}
+.main__resume{
+    margin:20rem 0;
+    
+}
+.resume__body{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.resume__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid; */
+    color: var(--lite-gray);
+    margin-bottom: 1rem;
+}
+.resume__title .line {
+    margin: 0 !important;
+    width: 75% !important;
+    padding-left: 2rem ;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    margin:0 2rem;
+    /* padding: 0 .5rem 0 3rem; */
+   
+}
+.resume__body .contect{
+    margin-right:1rem ;
+    color: var(--lite-gray);
+}
+.resume__body .contect p{
+    line-height: 1.5rem;
+    margin: 1rem 2rem 0 0;
+    padding-left: 4rem;
+}
+
+.links a{
+    width: 190%;
+    padding-right: 1rem;
+    border-right: 2px solid var(--gray);
+    display: block;
+    color: var(--gray) !important;
+    text-decoration: none;
+}
+a.active{
+    background-color: rgba(73,184,165, .1);
+    color: var(--font-green) !important;
+    border-color: var(--font-green) !important;
 }
