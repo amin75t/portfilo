@@ -146,6 +146,13 @@ body{
 .ability-list ul li{
     padding: 3px;
     font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /* border: 1px solid; */
+}
+.ability-list ul li span{
+    margin-right: 4px;
 }
 .main__resume{
     margin:20rem 0;
